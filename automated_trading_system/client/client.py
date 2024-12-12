@@ -11,7 +11,7 @@ class OKXClient:
 
     def fetch_balance(self):
 
-        account_info = self.account_api.get_account()
+        account_info = self.account_api.get_account_balance()
         if account_info and 'data' in account_info and account_info['data']:
             # 'bal' 可能不在直接返回的数据中，查找可能的其他键
             for account in account_info['data']:
